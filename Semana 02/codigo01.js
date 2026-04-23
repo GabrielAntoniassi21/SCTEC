@@ -1,3 +1,6 @@
-let idade = 12
+const numero1 = 5
+const numero2 = 7
 
-console.log(idade>= 18) // pode entrar no site
+let soma = numero1 + numero2
+
+console.log(soma)
