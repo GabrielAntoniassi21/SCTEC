@@ -1,0 +1,30 @@
+let numero = 15.5  //number
+let nome = "nome"  //string
+
+let verdadeiroOuFalso = true  //boolean
+let funcionalidade = false // vai servir para bloquear acesso ou outros
+
+let telefone = null // telefone neste momento é nulo, ou seja, não tem valor
+let documento // sem definição do documento
+
+//tipo de dados
+
+let texto = "Olá mundo";
+
+console.log(typeof texto);//console.log serve para mostrar oq esta aparecendo para o usuario
+
+let soma = 5 + 3 + 3 + 5 + 6 + 4 + 4 + 5 * 2 / 2;
+
+""=="" // igual a     "1" == 1  // true   //  resultado é true pq ambos vao ter o valor 1
+
+""===""  // estritamente igual a   "1" === // false   / resultado é false porque um vai ser number o outro string
+
+" > , < " //  maior, menor   // 20>20  // true
+
+">= , <= " // maior ou igual, menor ou igual 
+
+"!=" // Diferente de      //  1 != 2 // true
+
+"!==" //  Estritamente diferente de    //   1 !== "1"    //  true
+
+
