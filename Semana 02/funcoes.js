@@ -13,13 +13,36 @@
 
  */
 
-
- let soma = 0
-
- function adicionar(valor){
-    soma = soma + valor
+/*
+ function soma(numero1, numero2){
+    console.log(numero1 + numero2)
  }
 
- adicionar(5)
- adicionar(7)
- adicionar(8)
+ soma(5, 3)
+
+*/
+
+/*
+function saudacao(nome1, nome2){
+    //console.log('Ola,' + nome1 + 'e' + nome2 + 'sejam bem-vindos' )
+    console.log(`Olá, ${nome1} e ${nome2} sejam bem-vindos`)
+ }
+
+ saudacao('Gabriel', 'Vanessa')
+*/
+ 
+
+ /*
+ const nome = input("Digite seu nome")
+
+ saudacao(nome, "alice")
+*/
+
+//função com multiplos parametros
+function criarPerfil (nome, idade, cidade = "Não informado"){  // primeiro colocar parametros obrigatorios e depois colocar opcionais
+    console.log("nome: " + nome)
+    console.log("idade: " + idade)
+    console.log("cidade: " + cidade)
+    console.log("----" )
+}
+criarPerfil ("Gabriel", 18, "Orleans")

@@ -53,3 +53,41 @@ function - palavra reservada
   nomeFuncao
       //chama a função
 */
+
+
+//parametros opcionais 
+function saudacao(nome = "visitante"){
+    console.log(`Ola, ${nome}!`)
+}
+saudacao()  // se nao colocar nada no parametro na hora de exibir ele vai voltar como visitante porque o nome visitante ja havia sido definido no parentese
+saudacao("Gabriel")
+
+
+
+
+/*Funções de retorno
+ usar quando: guarda resultado em variavel, usar direto 
+
+
+ void exibi algo na tela
+
+ return numero faz calculos
+ */
+function soma(numero1, numero2){
+    return numero1 + numero2
+}
+
+let resultado = soma(5,3)
+
+console.log(`Resultado da soma: ${resultado}`)
+console.log`resultado da soma (8 + 8): ${soma(8,8)}`
+
+ /*
+ return strig fomata texto
+*/
+
+
+
+/*
+ return booleans
+*/
