@@ -27,4 +27,29 @@ let soma = 5 + 3 + 3 + 5 + 6 + 4 + 4 + 5 * 2 / 2;
 
 "!==" //  Estritamente diferente de    //   1 !== "1"    //  true
 
+//operadores logicos
 
+"||"   // OR(ou)   true || true  // true
+
+"&&"  // AND(e)   false&&false  // true  // ambos tem que ser igual
+
+//Sintaxe if
+
+if (condição) {
+    //executa se a condição for verdadeira
+}  else {
+    // execute se a condição for falsa   // não é obrigatório o uso dele  // só vai ser executado se a condição anterior for falsa
+}
+
+/* 3 elementos da função
+function - palavra reservada
+() - entram os parametros
+     
+
+
+ function nomeFuncao () {
+      //codigo que sera executado
+ }
+  nomeFuncao
+      //chama a função
+*/
