@@ -21,10 +21,12 @@ const produtos = [
 
 /*
 console.log(
-    produtos.find((item) => item.nome  === "Feijão" )
+    produtos.find((item) => item.nome  === "Feijão" )    procura um item pelo nome
 )
 */
 
+/*
 console.log(
-    produtos.find((produto) => produto.valor === 20)
+    produtos.find((produto) => produto.valor === 20)     procura um item pelo valor
 )
+*/

@@ -30,3 +30,4 @@ pessoas.push({
     idade : 20
 })
 console.log(pessoas) // Exibindo o array de objetos pessoas atualizado
+
