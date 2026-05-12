@@ -1,0 +1,66 @@
+construa uma função que seja chamada pelo do..while que irá exibir o menu da aplicação,
+ele deve conter as opções abaixo:
+1 - registrar atividade
+2 - ver historico
+3 - ver resumo
+0 - sair
+
+precisa ser verificado ao fim de cada seleção do menu pelo usuario, se (if) a opção é valida
+
+==============
+
+ o que preciso:
+
+ função -> menu
+
+ do..while -> para exibir o menu até o usuario escolher a opção 0
+
+ menu da aplicação
+   1 - registrar atividade
+   2 - ver historico
+   3 - ver resumo
+   0 - sair
+
+  console.log(ok)
+
+  prompt-sync -> para ler a opção escolhida pelo usuario
+
+  - verificar se  a opção é valida
+    as opções validas são 1,2,3,0 -> 
+
+
+  =============
+ function menu() {
+    console.log("1 - registrar atividade
+    2 - ver historico
+    3 - ver resumo
+    0 - sair)
+ }
+  
+  menu()
+
+==============
+
+
+  objetivo 2
+
+  constru o fluxo de registro de atividade (opção 1 do menu) a partir do menu da aplicação
+
+  a funcionalidade deve conter:
+    - exibir os exercicios disponiveis
+    - perguntar qual exercicio o usuario deseja registrar
+
+  solicitar:
+    -distancia percorrida
+    -tempo gasto em minutos
+    -ao final, adicionar a ativdade no array de atividades.
+
+=================
+
+ o que preciso:
+    função -> NovaAtividades
+
+
+    -let exercicio = prompt("Qual foi o exercicio realizado?")
+    -let tempo = Number(prompt('Digite quanto tempo durou seu exercicio: '));
+    -let distancia = Number(prompt('Digite os kms do seu exercicio: '));
