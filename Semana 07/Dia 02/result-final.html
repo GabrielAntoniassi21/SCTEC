@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout 2 Colunas</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cabeçalho */
+        .cabecalho {
+            background-color: #26384d;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Área central */
+        .secoes {
+            flex: 1;
+            background-color: #e6e6e6;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .secao {
+            width: 250px;
+            height: 250px;
+            border: 1px solid gray;
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        /* Rodapé */
+        .rodape {
+            background-color: #26384d;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="cabecalho">
+        <div>Cabeçalho</div>
+
+        <div class="links">
+            <div>Link 1</div>
+            <div>Link 2</div>
+            <div>Link 3</div>
+        </div>
+    </nav>
+
+    <main class="secoes">
+        <div class="secao">Seção 1</div>
+        <div class="secao">Seção 2</div>
+    </main>
+
+    <footer class="rodape">
+        rodapé 2022
+    </footer>
+
+</body>
+</html>

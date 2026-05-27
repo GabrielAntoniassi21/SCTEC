@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex 2 colunas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh;
+        }
+        .coluna1, .coluna2 {
+            width: 50%;
+            flex: 1;
+        }
+        .coluna1 {
+            background-color: blue;
+        }
+
+        .coluna2 {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="coluna1">
+
+        </div>
+
+        <div class="coluna2">
+
+        </div>
+    </div>    
+</body>
+</html>

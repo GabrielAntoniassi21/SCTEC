@@ -1,13 +1,42 @@
 <!DOCTYPE html>
-<html lang="br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Uso do Flexbox</title>
+    
+    <style>
+        * {
+            font-size: 32px;
+        }
+        .menu-horizontal {
+            display: flex;
+            flex-direction: row;
+            gap: 14px;
+        }
+        .menu-vertical {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            background-color: #0000003f
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        Bicicleta bola
+
+    <!-- Menu Vertical -->
+    <nav class="menu-vertical">
+        <div>Home</div>
+        <div>About</div>   
+        <div>Services</div>
+        <div>Contact</div>
+    </nav>
+
+    <!-- Menu Horizontal -->
+    <div class="menu-horizontal">
+        <div class="item">Bicicletas</div>
+        <div class="item">Seguros</div>
+        <div class="item">Contato</div>
     </div>
 </body>
 </html>
