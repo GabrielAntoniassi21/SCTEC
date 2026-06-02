@@ -25,6 +25,9 @@ btnEscolha.addEventListener('click', (event) => {
     console.log('CLIQUEI NO BOTÃO');
 });
 **/
+
+
+/** 
 const img1 = document.getElementById('img1');
 const nome1 = document.getElementById('nome1');
 const preco1 = document.getElementById('preco1');
@@ -34,7 +37,23 @@ const preco2 = document.getElementById('preco2');
 const img3 = document.getElementById('img3');
 const nome3 = document.getElementById('nome3');
 const preco3 = document.getElementById('preco3');
+*/
 
+const bikes = document.querySelectorAll('.bike');
+console.log(bikes);
+bikes.forEach((bike) => {
+    bike.addEventListener('click', () => {
+        const img = bike.querySelector('.foto-bike').src;
+        const nome = bike.querySelector('.nome-bike').textContent;
+        const preco = bike.querySelector('.preco-bike').textContent;
+        console.log('Clicou na imagem da bike:', img);
+        console.log('Clicou na bike:', nome);
+        console.log('Preço:', preco);
+    });
+});
+
+
+/** 
 img1.addEventListener('click', () => {
     console.log('clicou na imagem 1');
     console.log(nome1.textContent);
@@ -50,3 +69,4 @@ img3.addEventListener('click', () => {
     console.log(nome3.textContent);
     console.log(preco3.textContent);
 });
+*/
