@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Bikcraft</title>
-
-     <!-- Integrar o CSS com o HTML -->
+    <title>Bikcraft</title>
+    <!-- Integrar o CSS com o HTML -->
     <link rel="stylesheet" href="./style.css">
-
 </head>
+
 <body>
     <header>
-        <h1>bikcraft</h1>
+        <img src="https://www.origamid.com/projetos/bikcraft/img/bikcraft.svg" alt="Logo da Bikcraft">
+
         <nav>
             <a href="#">Bicicletas</a>
             <a href="#">Seguros</a>
@@ -19,16 +20,55 @@
         </nav>
     </header>
 
-    <main>
+    <section class="hero">
         <div class="coluna1">
-            <h2>Bicicletas feitas sob medida.</h1>
-            <h3>Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft. </h2>
+            <div  class="introducao">
+                <h1>Bicicletas feitas sob medida<span class="cor-destaque">.</span></h1>
+                <p id="subtitulo-introducao"> Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na
+                    sua velocidade com a Bikcraft.</p>
+                <button id="btn-escolha" class="btn-escolha">ESCOLHA A SUA</button>
+            </div>
         </div>
-        <div class="coluna2"><img src="https://www.origamid.com/projetos/bikcraft/img/fotos/introducao.jpg"</div>
-    </main>
+        <div class="coluna2">
+            <img class="foto-introducao" src="https://www.origamid.com/projetos/bikcraft/img/fotos/introducao.jpg"
+                alt="Foto de uma bicicleta">
+        </div>
+        <!-- 2 colunas (1 textual | imagem) -->
+        <!-- 
+        pai -> flex row (horizontal)
+         filho1 (coluna 50%)
+         filho2 (coluna 50%)
+         -->
+    </section>
 
-    <footer>
-        <p class="texto-rodape">rodapé 2026</p>
-    </footer>
+    <section class="escolha-sua">
+        <h2>escolha a sua<span class="cor-destaque">.</span></h2>
+
+        <div id="mostruarioID" class="mostruario-bikes">
+            <div class="bike">
+                <img id="img1" class="foto-bike" src="https://www.origamid.com/projetos/bikcraft/img/bicicletas/magic-home.jpg"
+                    alt="Magic Might">
+                <p id="nome1" class="nome-bike">Magic Might</p>
+                <p id="preco1" class="preco-bike">R$ 2499</p>
+            </div>
+
+            <div class="bike">
+                <img id="img2" class="foto-bike" src="https://www.origamid.com/projetos/bikcraft/img/bicicletas/nimbus-home.jpg"
+                    alt="Nimbus Stark">
+                <p id="nome2" class="nome-bike">Nimbus Stark</p>
+                <p id="preco2" class="preco-bike">R$ 4999</p>
+            </div>
+
+            <div class="bike">
+                <img id="img3" class="foto-bike" src="https://www.origamid.com/projetos/bikcraft/img/bicicletas/nebula-home.jpg"
+                    alt="Nebula Cosmic">
+                <p id="nome3" class="nome-bike">Nebula Cosmic</p>
+                <p id="preco3" class="preco-bike">R$ 3999</p>
+            </div>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
 </body>
+
 </html>

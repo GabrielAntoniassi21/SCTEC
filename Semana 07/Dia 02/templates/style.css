@@ -1,10 +1,10 @@
 * {
     margin: 0;
     padding: 0;
-    background-color: #000000
+    font-family: 'Inter', sans-serif;
 }
 header, footer {
-    background-color: #000000;
+    background-color: #000;
     color: #fff;
     height: 72px;
 }
@@ -15,8 +15,6 @@ main {
 
 a {
     color: #fff;
-    font-size: 30px;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -37,42 +35,102 @@ main {
     display: flex;
     flex-direction: row;    
 }
-h1, h2,h3{
-    font-family: Arial, Helvetica, sans-serif;
-}
-h2{
-    display: flex;
-    flex-direction: row;   
-    justify-content: center;
-    align-items: center;
-    font-size: 78px;
-}
-h3{
-    color:#797676;
-}
-img {
-    width: 700px;
-    height: auto;
-}
-
-
 .coluna1, .coluna2 {
+    height: 100vh;
     width: 50%;
-    flex: 1;  
-    
+    flex: 1;    
+    background: #000;
 }
-
 .coluna1 {
-    background-color: rgb(0, 0, 0);
-    color:#ffffff;
-    margin: 100px;
-    padding: 55px;  
+    /* background-color: gray; */
+    color: #fff;
 }
 
 .coluna2 {
-    background-color: rgb(143, 32, 32);
+    /* background-color: rgb(195, 195, 195); */
+}
 
-    margin: 50px;
-    padding: 0px;  
-    margin-right: 150px;
+/* RESOLUCAO */
+
+nav {
+    display: flex;
+    gap: 32px;
+}
+
+.hero {
+    display: flex;
+    flex-direction: row; 
+}
+
+.foto-introducao {
+    height: 620px;
+    object-fit: contain;
+}
+
+.coluna1 {
+    display: flex;
+    /* 
+    alinhar itens no eixo principal 
+    se row -> eixo principal é horizontal
+    se column -> eixo principal é vertical
+    */
+    justify-content: center;
+    /* 
+    alinhar itens no eixo secundario (transversal)
+     */
+    align-items: center;
+}
+
+.introducao {
+    width: 60%;
+}
+
+.btn-escolha {
+    background: linear-gradient(#ffbf00, #f2a50c);
+    height: 42px;
+    width: 150px;
+    border-radius: 4px;
+    border: none;
+    margin-top: 32px;
+}
+
+.introducao p {
+    color: rgb(188, 188, 188);
+    margin-top: 6px;
+}
+
+.cor-destaque {
+    color: #ffbf00;
+}
+
+/* CLASSES DA SEÇÃO ESCOLHA SUA */
+.escolha-sua {
+    background: #fff;
+    height: 100vh;
+    padding: 80px 120px;
+}
+
+/* 
+foto-bike
+nome-bike
+preco-bike */
+
+.mostruario-bikes {
+    display: flex;
+    gap: 14px;
+}
+
+.bike{
+    flex: 1;
+}
+.foto-bike {
+    height: 320px;
+    border-radius: 4px;
+}
+.nome-bike {
+    font-weight: 700;
+}
+.preco-bike {
+    font-weight: 400;
+    color: #9f9f9f;
 }
