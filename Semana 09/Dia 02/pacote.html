@@ -1,0 +1,78 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/orcamento.style.css" />
+    <title>Orçamento</title>
+  </head>
+  <body>
+    <a href="../index.html">Voltar para Home</a>
+    <header>
+      <h1>Cabeçalho</h1>
+      <p>Pacote de viagem</p>
+    </header>
+
+    <main>
+      <h2>Solicite seu orçamento</h2>
+
+      <form action="">
+        <label for="nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required />
+
+        <label for="cidade">Cidade-sede</label>
+        <select name="cidade" id="cidade">
+          <option value="cdmx">Cidade do México</option>
+          <option value="ny">Nova York</option>
+          <option value="tor">Toronto</option>
+          <option value="la">Los Angeles</option>
+          <option value="nj">Nova Jersey</option>
+        </select>
+
+        <p>Tipo de Pacote</p>
+        <input type="radio" name="pacote" id="pacote-economico" />
+        <label for="pacote-economico">Econômico</label>
+
+        <input type="radio" name="pacote" id="pacote-conforto" />
+        <label for="pacote-conforto">Conforto</label>
+
+        <input type="radio" name="pacote" id="pacote-premium" />
+        <label for="pacote-premium">Premium</label>
+
+        <p>Extras</p>
+        <input type="checkbox" name="ingresso" id="ingresso" />
+        <label for="ingresso">Ingresso</label>
+
+        <input type="checkbox" name="seguro" id="seguro" />
+        <label for="seguro">Seguro</label>
+
+        <input type="checkbox" name="traslado" id="traslado" />
+        <label for="traslado">Traslado</label>
+
+        <label for="data-ida">Data de Ida</label>
+        <input type="date" id="data-ida" name="data-ida" />
+
+        <label for="data-volta">Data de Volta</label>
+        <input
+          type="date"
+          id="data-volta"
+          name="data-volta"
+          max="2026-06-15"
+          min="2026-06-10"
+        />
+
+        <label for="observacoes">Observações</label>
+        <textarea name="observacoes" id="observacoes"></textarea>
+
+        <button type="submit">Solicitar orçamento</button>
+      </form>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>
