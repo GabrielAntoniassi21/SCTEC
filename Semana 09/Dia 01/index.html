@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/styles/index.style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Tipos de campos de formulário</h1>
+
+    <!-- Todo campo precisa do seu label: o for aponta para o id -->
+    <form>
+      <!-- Campos de texto -->
+      <label for="nome">Nome (text):</label>
+      <input type="text" id="nome" name="nome" />
+
+      <label for="email">E-mail (email):</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="senha">Senha (password):</label>
+      <input type="password" id="senha" name="senha" />
+
+      <!-- Campos numéricos e de data -->
+      <label for="idade">Idade (number):</label>
+      <input type="number" id="idade" name="idade" min="18" max="100" />
+
+      <label for="checkin">Check-in (date):</label>
+      <input type="date" id="checkin" name="checkin" />
+
+      <label for="telefone">Telefone (tel):</label>
+      <input type="tel" id="telefone" name="telefone" />
+
+      <!-- Checkbox: várias opções podem ser marcadas -->
+      <p>Checkbox (escolha múltipla):</p>
+      <input type="checkbox" id="ofertas" name="ofertas" value="sim" />
+      <label for="ofertas">Quero receber ofertas durante a Copa</label>
+
+      <!-- Radio: apenas UMA opção do grupo (mesmo name) -->
+      <p>Radio (escolha única — o mesmo name forma o grupo):</p>
+      <input type="radio" id="plano-mensal" name="plano" value="mensal" />
+      <label for="plano-mensal">Plano Mensal</label>
+
+      <input type="radio" id="plano-anual" name="plano" value="anual" />
+      <label for="plano-anual">Plano Anual</label>
+
+      <!-- Select: lista suspensa. O value é o que o sistema recebe -->
+      <p>Select (lista suspensa):</p>
+      <label for="cidade">Cidade-sede:</label>
+      <select id="cidade" name="cidade">
+        <option value="">Selecione...</option>
+        <option value="cdmx">Cidade do México</option>
+        <option value="ny">Nova York</option>
+        <option value="la">Los Angeles</option>
+        <option value="toronto">Toronto</option>
+      </select>
+
+      <!-- Textarea: texto longo, com tag de abertura e fechamento -->
+      <p>Textarea (texto longo):</p>
+      <label for="observacoes">Observações:</label>
+      <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+      <!-- Atributos úteis -->
+      <p>Atributos: placeholder, required, maxlength</p>
+      <label for="usuario">Usuário:</label>
+      <input
+        type="text"
+        id="usuario"
+        name="usuario"
+        placeholder="ex: maria.silva"
+        required
+        maxlength="20"
+      />
+
+      <!-- submit dispara o envio do form; button não envia nada -->
+      <!-- Cuidado: button sem type é submit por padrão! -->
+      <button type="submit">Enviar (submit)</button>
+      <button type="button">Não envia nada (button)</button>
+    </form>
+
+    <script src="./assets/scripts/main.js"></script>
+  </body>
+</html>
