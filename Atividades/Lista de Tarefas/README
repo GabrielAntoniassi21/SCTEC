@@ -1,0 +1,96 @@
+Atividade: Lista de Tarefas (To-Do List)
+Objetivo
+
+Criar uma página onde o usuário:
+
+✅ Digita uma tarefa
+✅ Clica em Adicionar
+✅ A tarefa aparece na tela
+✅ Pode remover a tarefa clicando em um botão
+
+-------------------------------------
+
+HTML
+
+Um título
+Um input para digitar a tarefa
+Um botão “Adicionar”
+Uma área onde as tarefas vão aparecer (ul ou div)
+
+-------------------------------------
+
+CSS
+
+centralizar conteúdo
+cor de fundo
+borda
+padding
+margin
+border-radius
+efeito hover no botão
+
+-------------------------------------
+
+JavaScript
+
+getElementById()
+addEventListener()
+createElement()
+appendChild()
+textContent
+value
+remove()
+if
+
+------------------------------------
+
+1. Adicionar tarefa
+
+Quando clicar no botão:
+
+Se o input estiver vazio:
+
+Mostrar:
+
+Digite uma tarefa!
+
+******************************
+
+2. Estrutura da tarefa
+
+Cada tarefa deve ter:
+
+Estudar JavaScript      [Excluir]
+
+******************************
+
+Botão excluir
+
+Ao clicar:
+
+A tarefa some da tela.
+
+*****************************
+
+Fazer quando clicar na tarefa ela ficar riscada:
+
+Exemplo:
+
+Estudar JavaScript
+
+Dica: usar classList.toggle().
+
+*****************************************
+
+Exemplo visual simples
+--------------------------
+     Minha To-Do List
+--------------------------
+
+[ Digite a tarefa ]
+
+[ Adicionar ]
+
+• Estudar JS      [Excluir]
+• Fazer trabalho  [Excluir]
+• Jogar um game   [Excluir]
