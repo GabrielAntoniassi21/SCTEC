@@ -1,0 +1,440 @@
+/* PrevisaoCerta — A1. O CSS reusa o Flexbox/responsivo da S07/S10:
+   a NOVIDADE da aula é a semântica do HTML, não o layout. Comentário propriedade a propriedade. */
+
+/* O seletor "*" pega TODOS os elementos da página de uma vez (é o "reset" inicial). */
+* {
+  margin: 0;
+  /* zera a margem padrão do navegador */
+  padding: 0;
+  /* zera o padding padrão */
+  box-sizing: border-box;
+  /* width/height já incluem padding e borda — use sempre */
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  /* fonte do sistema (sem depender de CDN na A1) */
+}
+
+body {
+  background-color: #f4f6f8;
+  /* cinza muito claro = tema operacional limpo */
+  color: #1d2733;
+  /* texto escuro com bom CONTRASTE (requisito de a11y) */
+  line-height: 1.5;
+  /* respiro entre linhas, ajuda a leitura */
+}
+
+a {
+  color: #0b67c2;
+}
+
+/* link com contraste suficiente sobre o fundo claro */
+
+/* .container: centraliza e limita a largura (mesmo padrão da S10) */
+.container {
+  max-width: 960px;
+  /* não estica demais em telas largas */
+  margin: 0 auto;
+  /* auto nas laterais = centraliza */
+  padding: 0 20px;
+  /* respiro lateral em qualquer tela */
+}
+
+/* HEADER em Flexbox (logo/marca | menu) */
+.cabecalho {
+  background-color: #0b3d62;
+  color: #fff;
+}
+
+/* azul-marinho do topo + texto branco por cima */
+.cabecalho-interna {
+  display: flex;
+  /* logo, marca e menu lado a lado */
+  flex-wrap: wrap;
+  /* no celular quebram de linha */
+  align-items: center;
+  /* mesma altura */
+  justify-content: space-between;
+  /* empurra para as pontas */
+  gap: 16px;
+  /* espaço de 16px ENTRE os filhos (substitui margens manuais) */
+  padding-top: 16px;
+  /* respiro interno acima da barra */
+  padding-bottom: 16px;
+  /* respiro interno abaixo (juntos dão "altura" à barra) */
+}
+
+.logo {
+  height: 28px;
+  /* fixa a altura do logo em 28px */
+  max-width: 100%;
+  /* trava: nunca passa da largura disponível (não vaza em tela pequena) */
+}
+
+/* MARCA: o nome textual ao lado do logo (é ele que o leitor de tela anuncia, não a imagem) */
+.marca {
+  font-size: 1.25rem;
+  /* um pouco maior que o corpo, p/ destacar a identidade */
+  font-weight: 600;
+  /* semibold dá peso ao nome do produto */
+}
+
+.marca-sub {
+  font-size: 0.8rem;
+  /* menor: é o complemento "por AgroLog" */
+  font-weight: 400;
+  /* peso normal p/ ser secundário ao nome */
+  color: #bcd4e6;
+  /* azul bem claro: subordinado ao branco da marca, ainda com contraste */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+/* links lado a lado; quebram se faltar espaço; 24px entre eles */
+.menu a {
+  color: #fff;
+}
+
+/* links do menu em branco (sobrescreve o azul do "a" lá em cima) */
+
+/* FOCO VISÍVEL — conceito de a11y: NÃO remover o outline; reforçar.
+   Toda navegação por teclado precisa ver onde está. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #ffb300;
+  /* contorno bem visível ao tabular */
+  outline-offset: 2px;
+  /* afasta o contorno 2px do elemento, p/ ele "respirar" e ficar legível */
+}
+
+/* .visually-hidden: some da tela MAS continua no leitor de tela (rótulos invisíveis) */
+.visually-hidden {
+  position: absolute;
+  /* tira do fluxo p/ não ocupar espaço visual */
+  width: 1px;
+  height: 1px;
+  /* reduz a 1px (some do olho, mas continua no DOM) */
+  padding: 0;
+  margin: -1px;
+  /* zera o respiro e puxa 1px p/ fora, p/ não deixar resíduo na tela */
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  /* recorta tudo que vazaria do 1×1px */
+  white-space: nowrap;
+  border: 0;
+  /* impede quebra de linha e remove qualquer borda */
+}
+
+/* MAIN: respiro vertical entre o header/footer e o conteúdo das seções */
+main {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+/* TÍTULOS: hierarquia visual que acompanha a hierarquia semântica (um h1, depois h2, depois h3) */
+h1 {
+  font-size: 1.8rem;
+  /* maior título da página (só existe um h1) */
+  margin-bottom: 24px;
+  /* afasta do primeiro bloco abaixo */
+}
+
+h2 {
+  font-size: 1.3rem;
+  /* título de seção, menor que o h1 */
+  margin-bottom: 12px;
+  /* espaço antes do conteúdo da seção */
+}
+
+/* cada <section> ganha respiro abaixo p/ separar visualmente as regiões da página */
+section {
+  margin-bottom: 32px;
+}
+
+/* BUSCA — Flexbox que quebra: campo + botões lado a lado, empilham no celular */
+.form-busca {
+  display: flex;
+  /* label, input e botões viram itens flex em linha */
+  flex-wrap: wrap;
+  /* quebram de linha quando a tela aperta */
+  align-items: flex-end;
+  /* alinha tudo pela base (o label fica acima do input via display:block) */
+  gap: 12px;
+  /* espaço entre os itens do form */
+}
+
+.form-busca label {
+  display: block;
+  /* o rótulo ocupa a linha toda, ficando ACIMA do input */
+  flex-basis: 100%;
+  /* força o label p/ a própria linha (input e botões vêm abaixo) */
+  font-weight: 600;
+  /* destaca o rótulo do campo */
+}
+
+.form-busca input {
+  flex: 1 1 240px;
+  /* o campo cresce p/ preencher o espaço, partindo de 240px */
+  padding: 10px 12px;
+  /* respiro interno p/ o texto não colar na borda */
+  border: 1px solid #c3cdd6;
+  /* borda fina cinza-azulada */
+  border-radius: 6px;
+  /* cantos levemente arredondados */
+  background-color: #fff;
+  /* fundo branco do campo */
+  color: #1d2733;
+  /* texto digitado na cor do corpo */
+}
+
+/* botões da busca: mesmo formato, cores diferentes (primário × secundário) */
+.form-busca button {
+  padding: 10px 18px;
+  /* botão "gordinho" e clicável */
+  border: none;
+  /* remove a borda padrão */
+  border-radius: 6px;
+  /* cantos arredondados */
+  font-weight: 600;
+  /* texto com peso */
+  cursor: pointer;
+  /* mãozinha ao passar o mouse, indicando que é clicável */
+}
+
+#btn-buscar {
+  background-color: #0b67c2;
+  /* azul primário = ação principal (buscar) */
+  color: #fff;
+  /* texto branco contrasta com o azul */
+}
+
+#btn-minha-localizacao {
+  background-color: #e7edf2;
+  /* cinza claro = ação secundária (menos destaque que o "Buscar") */
+  color: #0b3d62;
+  /* texto azul-marinho com bom contraste no cinza */
+}
+
+/* #status: a região viva. min-height reserva o espaço p/ a mensagem não "pular" o layout.
+   Cor por modificador: .status--erro vermelho acessível, .status--carregando neutro. */
+#status {
+  min-height: 1.5em;
+  margin-top: 8px;
+}
+
+/* reserva uma linha de altura mesmo vazio */
+.status--erro {
+  color: #b00020;
+  font-weight: 600;
+}
+
+/* vermelho com contraste AA */
+.status--carregando {
+  color: #555;
+}
+
+/* cinza neutro p/ "carregando…" */
+.status--sucesso {
+  color: #1d7a34;
+}
+
+/* verde de sucesso */
+
+/* PREFERÊNCIA de unidade: fieldset com os radios °C/°F lado a lado */
+.seletor-unidade {
+  display: flex;
+  /* as duas opções (°C e °F) em linha */
+  flex-wrap: wrap;
+  /* quebram no celular se faltar espaço */
+  gap: 20px;
+  /* espaço entre as opções */
+  border: 1px solid #c3cdd6;
+  /* borda fina que delimita visualmente o grupo (o fieldset agrupa semanticamente) */
+  border-radius: 6px;
+  /* cantos arredondados */
+  padding: 12px 16px;
+  /* respiro interno do grupo */
+}
+
+.seletor-unidade label {
+  display: flex;
+  /* alinha o radio e o texto "°C"/"°F" lado a lado */
+  align-items: center;
+  /* centraliza o radio com o texto na vertical */
+  gap: 6px;
+  /* pequeno espaço entre o radio e a letra */
+  cursor: pointer;
+  /* mãozinha: a label inteira é clicável (boa prática de a11y) */
+}
+
+/* CARD do clima — caixa branca com sombra leve (article = conteúdo autônomo) */
+.card-clima {
+  background-color: #fff;
+  /* fundo branco destaca o card sobre o cinza da página */
+  border: 1px solid #e1e7ec;
+  /* borda fina p/ delimitar o card */
+  border-radius: 8px;
+  /* cantos arredondados */
+  padding: 24px;
+  /* respiro interno do card */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  /* sombra: x=0, y=1px, blur=3px, preto com 8% de opacidade */
+  max-width: 360px;
+  /* o card não estica demais em telas largas */
+}
+
+.card-cidade {
+  font-size: 1.2rem;
+  /* nome da cidade em destaque dentro do card */
+  margin-bottom: 12px;
+  /* afasta o nome do ícone/dados abaixo */
+}
+
+.card-icone {
+  width: 56px;
+  /* tamanho fixo do ícone do tempo */
+  height: 56px;
+  /* mantém o quadrado (ícone informativo, com alt descritivo) */
+  margin-bottom: 12px;
+  /* espaço abaixo do ícone, antes da lista de dados */
+}
+
+/* <dl> do card: cada par rótulo/valor (dt/dd) numa linha, rótulo à esquerda e valor à direita */
+.card-lista {
+  display: flex;
+  /* habilita o flex p/ organizar os pares */
+  flex-direction: column;
+  /* empilha os pares verticalmente (um abaixo do outro) */
+  gap: 8px;
+  /* espaço entre os pares */
+}
+
+.card-dado {
+  display: flex;
+  /* rótulo (dt) e valor (dd) lado a lado */
+  justify-content: space-between;
+  /* empurra rótulo p/ a esquerda e valor p/ a direita */
+  gap: 16px;
+  /* espaço mínimo entre os dois quando ficam perto */
+}
+
+.card-dado dt {
+  color: #5a6b7b;
+  /* cinza-azulado: o rótulo é secundário ao valor */
+}
+
+.card-dado dd {
+  font-weight: 600;
+  /* o valor (24°C, Céu limpo) em destaque */
+}
+
+/* LISTA de cidades monitoradas (ul) — sem marcadores, cada item é uma linha-card */
+.lista-cidades {
+  list-style: none;
+  /* remove a "bolinha" padrão da <ul> */
+  display: flex;
+  /* habilita o flex p/ empilhar os itens */
+  flex-direction: column;
+  /* um item abaixo do outro */
+  gap: 8px;
+  /* espaço entre os itens da lista */
+  margin-bottom: 16px;
+  /* afasta a lista do botão "Limpar tudo" */
+}
+
+/* cada <li>: nome à esquerda, botão "Remover" à direita */
+.cidade-item {
+  display: flex;
+  /* nome e botão lado a lado */
+  align-items: center;
+  /* alinha verticalmente nome e botão */
+  justify-content: space-between;
+  /* empurra o botão p/ a direita */
+  gap: 16px;
+  /* espaço entre o nome e o botão */
+  background-color: #fff;
+  /* fundo branco do item, destacando-o do fundo da página */
+  border: 1px solid #e1e7ec;
+  /* borda fina */
+  border-radius: 6px;
+  /* cantos arredondados */
+  padding: 10px 14px;
+  /* respiro interno do item */
+}
+
+.cidade-nome {
+  font-weight: 600;
+  /* nome da cidade em destaque */
+}
+
+/* botão "Remover" dentro de cada item — secundário, com cara de ação destrutiva discreta */
+.btn-remover {
+  background-color: #fdecef;
+  /* rosa bem claro = ação de remover, sem gritar */
+  color: #b00020;
+  /* texto vermelho com bom contraste no rosa claro */
+  border: 1px solid #f3c2cb;
+  /* borda fina combinando com o tom de remover */
+  border-radius: 6px;
+  /* cantos arredondados */
+  padding: 6px 12px;
+  /* botão menor que os da busca (ação secundária) */
+  font-weight: 600;
+  /* texto com peso */
+  cursor: pointer;
+  /* mãozinha ao passar o mouse */
+}
+
+.btn-remover:hover {
+  background-color: #f9d7dd;
+  /* ao passar o mouse, escurece levemente o rosa */
+}
+
+/* botão "Limpar tudo" — ação que afeta a lista inteira, estilo neutro */
+#btn-limpar-tudo {
+  background-color: #e7edf2;
+  /* cinza claro = ação secundária */
+  color: #0b3d62;
+  /* texto azul-marinho com contraste no cinza */
+  border: none;
+  /* remove a borda padrão */
+  border-radius: 6px;
+  /* cantos arredondados */
+  padding: 10px 18px;
+  /* mesmo "peso" dos botões da busca */
+  font-weight: 600;
+  /* texto com peso */
+  cursor: pointer;
+  /* mãozinha ao passar o mouse */
+}
+
+/* RODAPÉ — faixa escura no fim da página, espelhando o tom do cabeçalho */
+.rodape {
+  background-color: #0b3d62;
+  /* mesmo azul-marinho do topo, fechando a moldura */
+  color: #fff;
+  /* texto branco por cima do azul */
+  padding-top: 20px;
+  /* respiro interno acima do texto */
+  padding-bottom: 20px;
+  /* respiro interno abaixo */
+  margin-top: 32px;
+  /* afasta o rodapé do conteúdo do main */
+}
+
+/* RESPONSIVO em PIXELS (régua do DevTools). No celular, o que estava lado a lado empilha. */
+@media (max-width: 700px) {
+  .card-clima {
+    max-width: 100%;
+    /* no celular o card pode ocupar a largura inteira disponível */
+  }
+
+  .form-busca input,
+  .form-busca button {
+    flex-basis: 100%;
+    /* campo e botões da busca empilham um abaixo do outro */
+  }
+}

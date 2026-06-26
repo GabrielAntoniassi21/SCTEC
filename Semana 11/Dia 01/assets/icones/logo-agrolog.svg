@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" role="img" aria-hidden="true">
+  <!-- Logo decorativo da AgroLog: folha sobre gota d'água (clima + agro).
+       No HTML este logo usa alt="" porque o nome "PrevisaoCerta por AgroLog" já vem em texto ao lado. -->
+  <circle cx="14" cy="14" r="14" fill="#1c8a4a" />
+  <path d="M14 6c-4 3-6 6-6 9a6 6 0 0 0 12 0c0-3-2-6-6-9z" fill="#ffffff" />
+  <path d="M14 11c0 3 1.5 5 3.5 6.2C16 14.5 15 12.8 14 11z" fill="#1c8a4a" />
+</svg>

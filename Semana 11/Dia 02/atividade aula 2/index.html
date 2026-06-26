@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MinhaFeira — Lista de compras</title>
+  <meta name="description" content="Lista de compras que lembra dos itens mesmo depois de recarregar a página." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="cabecalho">
+    <div class="container">
+      <p class="marca">🛒 MinhaFeira</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Minha lista de compras</h1>
+
+    <!-- ADICIONAR item -->
+    <section class="bloco" aria-labelledby="titulo-add">
+      <h2 id="titulo-add" class="titulo-bloco">Adicionar item</h2>
+      <form id="form-item" class="form-item">
+        <label for="input-item">Nome do item</label>
+        <input type="text" id="input-item" placeholder="Ex.: Arroz" autocomplete="off" />
+        <button type="submit">Adicionar</button>
+      </form>
+      <!-- região viva: anuncia avisos ao leitor de tela sem mover o foco -->
+      <p id="status" class="status" aria-live="polite" role="status"></p>
+    </section>
+
+    <!-- LISTA (começa vazia; o JS preenche a partir do localStorage) -->
+    <section class="bloco" aria-labelledby="titulo-lista">
+      <h2 id="titulo-lista" class="titulo-bloco">Itens da lista</h2>
+      <ul id="lista-itens" class="lista-itens">
+        <!-- os <li> são criados pelo main.js (renderizarLista) -->
+      </ul>
+      <button type="button" id="btn-limpar" class="secundario">Limpar tudo</button>
+    </section>
+  </main>
+
+  <!-- defer = o JS só roda depois que o HTML carregou (assim o getElementById acha os elementos) -->
+  <script src="./main.js" defer></script>
+</body>
+</html>

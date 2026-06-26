@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" role="img" aria-hidden="true">
+  <!-- Ícone INFORMATIVO de "Céu limpo" (sol). No HTML usa alt="Céu limpo" porque
+       a imagem carrega informação que o texto não repete na mesma medida. -->
+  <circle cx="28" cy="28" r="11" fill="#f6a609" />
+  <g stroke="#f6a609" stroke-width="3" stroke-linecap="round">
+    <line x1="28" y1="6"  x2="28" y2="13" />
+    <line x1="28" y1="43" x2="28" y2="50" />
+    <line x1="6"  y1="28" x2="13" y2="28" />
+    <line x1="43" y1="28" x2="50" y2="28" />
+    <line x1="12" y1="12" x2="17" y2="17" />
+    <line x1="39" y1="39" x2="44" y2="44" />
+    <line x1="44" y1="12" x2="39" y2="17" />
+    <line x1="17" y1="39" x2="12" y2="44" />
+  </g>
+</svg>

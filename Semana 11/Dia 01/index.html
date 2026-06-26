@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO on-page: title aparece na aba e no Google; description é o resumo do resultado de busca -->
+  <title>PrevisaoCerta — Painel climático da AgroLog</title>
+  <meta name="description" content="Painel operacional da AgroLog para acompanhar o clima nas cidades de coleta e entrega." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <!-- LANDMARK header: identidade + navegação do painel -->
+  <header class="cabecalho">
+    <div class="container cabecalho-interna">
+      <!-- logo decorativo da MARCA: alt vazio (a máquina ignora; o nome já vem no texto ao lado) -->
+      <img src="./assets/logo-agrolog.svg" alt="" class="logo" />
+      <p class="marca">PrevisaoCerta <span class="marca-sub">por AgroLog</span></p>
+      <!-- LANDMARK nav com rótulo: o leitor de tela anuncia "navegação principal" -->
+      <nav aria-label="Navegação principal" class="menu">
+        <a href="#painel">Painel</a>
+        <a href="#cidades">Cidades</a>
+        <a href="#sobre">Sobre</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- LANDMARK main: o conteúdo único da página. UM só h1 na página inteira -->
+  <main class="container">
+    <h1>Clima das cidades de coleta e entrega</h1>
+
+    <!-- BUSCA: form com role=search; label ligado ao input por for/id -->
+    <section aria-labelledby="titulo-busca">
+      <h2 id="titulo-busca">Buscar cidade</h2>
+      <form id="form-busca" role="search" class="form-busca">
+        <label for="input-cidade">Nome da cidade</label>
+        <input type="search" id="input-cidade" name="cidade" placeholder="Ex.: Florianópolis" autocomplete="off" />
+        <button type="submit" id="btn-buscar">Buscar</button>
+        <!-- botão da Browser API: presente já na A1, inerte; ganha vida na A3 -->
+        <button type="button" id="btn-minha-localizacao">Usar minha localização</button>
+      </form>
+      <!-- REGIÃO VIVA: anuncia carregando/erro ao leitor de tela sem mover o foco -->
+      <p id="status" aria-live="polite" role="status"></p>
+    </section>
+
+    <!-- PREFERÊNCIA de unidade: fieldset agrupa os radios; legend é o rótulo do grupo -->
+    <section aria-labelledby="titulo-unidade">
+      <h2 id="titulo-unidade">Unidade de temperatura</h2>
+      <fieldset id="seletor-unidade" class="seletor-unidade">
+        <legend class="visually-hidden">Escolha a unidade</legend>
+        <label><input type="radio" name="unidade" id="unidade-celsius" value="celsius" checked /> °C</label>
+        <label><input type="radio" name="unidade" id="unidade-fahrenheit" value="fahrenheit" /> °F</label>
+      </fieldset>
+    </section>
+
+    <!-- CARD do clima: article (conteúdo autônomo); dl = pares rótulo/valor; time = momento -->
+    <section id="painel" aria-labelledby="titulo-painel">
+      <h2 id="titulo-painel">Clima atual</h2>
+      <article id="card-clima" class="card-clima">
+        <h3 class="card-cidade">Florianópolis</h3>
+        <!-- imagem INFORMATIVA: alt descreve o conteúdo (não decorativo) -->
+        <img src="./assets/icones/sol.svg" alt="Céu limpo" class="card-icone" />
+        <dl class="card-lista">
+          <div class="card-dado">
+            <dt>Temperatura</dt>
+            <dd>24°C</dd>
+          </div>
+          <div class="card-dado">
+            <dt>Condição</dt>
+            <dd>Céu limpo</dd>
+          </div>
+          <div class="card-dado">
+            <dt>Atualizado em</dt>
+            <dd><time datetime="2026-06-22T19:00">22/06 às 19:00</time></dd>
+          </div>
+        </dl>
+      </article>
+    </section>
+
+    <!-- COLEÇÃO: lista de cidades monitoradas. ul/li com nome + botão remover acessível -->
+    <section id="cidades" aria-labelledby="titulo-cidades">
+      <h2 id="titulo-cidades">Cidades monitoradas</h2>
+      <ul id="lista-cidades" class="lista-cidades">
+        <li class="cidade-item">
+          <span class="cidade-nome">Florianópolis</span>
+          <!-- aria-label dá ao botão um nome completo p/ o leitor de tela (o "X" sozinho não diz nada) -->
+          <button type="button" class="btn-remover" aria-label="Remover Florianópolis">Remover</button>
+        </li>
+        <li class="cidade-item">
+          <span class="cidade-nome">São Paulo</span>
+          <button type="button" class="btn-remover" aria-label="Remover São Paulo">Remover</button>
+        </li>
+      </ul>
+      <button type="button" id="btn-limpar-tudo">Limpar tudo</button>
+    </section>
+
+    <section id="sobre" aria-labelledby="titulo-sobre">
+      <h2 id="titulo-sobre">Sobre o painel</h2>
+      <p>Ferramenta interna da AgroLog para os despachantes acompanharem o tempo nas rotas.</p>
+    </section>
+  </main>
+
+  <!-- LANDMARK footer -->
+  <footer class="rodape">
+    <div class="container">
+      <p>PrevisaoCerta · AgroLog Logística © 2026</p>
+    </div>
+  </footer>
+</body>
+</html>

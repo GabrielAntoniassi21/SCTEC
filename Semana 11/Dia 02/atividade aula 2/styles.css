@@ -1,0 +1,74 @@
+/* MinhaFeira — CSS base da atividade. Não precisa mexer aqui; o foco é o main.js. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.cabecalho {
+  background: #166534;
+  color: #fff;
+  padding: 16px 0;
+}
+
+.container { width: min(640px, 92%); margin: 0 auto; }
+
+.marca { margin: 0; font-size: 20px; font-weight: 700; }
+
+main { padding: 24px 0; }
+
+h1 { font-size: 22px; margin: 0 0 16px; }
+
+.bloco {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.titulo-bloco { font-size: 16px; margin: 0 0 8px; }
+
+label { display: block; font-weight: 600; margin-bottom: 8px; }
+
+.form-item { display: flex; gap: 8px; flex-wrap: wrap; }
+
+input[type="text"] {
+  flex: 1;
+  min-width: 180px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #166534;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+button.secundario { background: #6b7280; margin-top: 12px; }
+
+.status { min-height: 20px; margin: 10px 0 0; font-size: 14px; }
+.status--erro { color: #b91c1c; }
+
+.lista-itens { list-style: none; margin: 0; padding: 0; }
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 4px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.btn-remover { background: #b91c1c; padding: 6px 12px; font-size: 14px; }
