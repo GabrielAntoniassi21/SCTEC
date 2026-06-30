@@ -16,7 +16,7 @@
     <header class="cabecalho">
       <div class="container cabecalho-interna">
         <!-- logo decorativo da MARCA: alt vazio (a máquina ignora; o nome já vem no texto ao lado) -->
-        <img src="./assets/logo-agrolog.svg" alt="" class="logo" />
+        <img src="./assets/icones/logo-agrolog.svg" alt="" class="logo" />
         <p class="marca">
           PrevisaoCerta <span class="marca-sub">por AgroLog</span>
         </p>
@@ -86,25 +86,21 @@
       <section id="painel" aria-labelledby="titulo-painel">
         <h2 id="titulo-painel">Clima atual</h2>
         <article id="card-clima" class="card-clima">
-          <h3 class="card-cidade">Florianópolis</h3>
-          <!-- imagem INFORMATIVA: alt descreve o conteúdo (não decorativo) -->
-          <img
-            src="./assets/icones/sol.svg"
-            alt="Céu limpo"
-            class="card-icone"
-          />
+          <h3 class="card-cidade">Selecione uma cidade</h3>
+          <!-- ícone do clima DINÂMICO (A3): emoji acessível via role="img" + aria-label. O JS troca o emoji conforme a condição. -->
+          <p class="card-icone" role="img" aria-label="Aguardando dados">⏳</p>
           <dl class="card-lista">
             <div class="card-dado">
               <dt>Temperatura</dt>
-              <dd>24°C</dd>
+              <dd class="card-temperatura">—</dd>
             </div>
             <div class="card-dado">
               <dt>Condição</dt>
-              <dd>Céu limpo</dd>
+              <dd class="card-condicao">—</dd>
             </div>
             <div class="card-dado">
               <dt>Atualizado em</dt>
-              <dd><time datetime="2026-06-22T19:00">22/06 às 19:00</time></dd>
+              <dd><time class="card-momento" datetime="">—</time></dd>
             </div>
           </dl>
         </article>
