@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "nome": "Lucas Almeida",
+    "email": "lucas.almeida@example.com",
+    "idade": 28,
+    "cidade": "São Paulo",
+    "ativo": true
+  },
+  {
+    "id": 2,
+    "nome": "Mariana Costa",
+    "email": "mariana.costa@example.com",
+    "idade": 34,
+    "cidade": "Rio de Janeiro",
+    "ativo": true
+  },
+  {
+    "id": 3,
+    "nome": "Pedro Santos",
+    "email": "pedro.santos@example.com",
+    "idade": 22,
+    "cidade": "Belo Horizonte",
+    "ativo": false
+  },
+  {
+    "id": 4,
+    "nome": "Ana Oliveira",
+    "email": "ana.oliveira@example.com",
+    "idade": 30,
+    "cidade": "Curitiba",
+    "ativo": true
+  },
+  {
+    "id": 5,
+    "nome": "Rafael Lima",
+    "email": "rafael.lima@example.com",
+    "idade": 41,
+    "cidade": "Porto Alegre",
+    "ativo": false
+  },
+  {
+    "id": 6,
+    "nome": "Juliana Ferreira",
+    "email": "juliana.ferreira@example.com",
+    "idade": 27,
+    "cidade": "Salvador",
+    "ativo": true
+  },
+  {
+    "id": 7,
+    "nome": "Bruno Martins",
+    "email": "bruno.martins@example.com",
+    "idade": 36,
+    "cidade": "Recife",
+    "ativo": true
+  },
+  {
+    "id": 8,
+    "nome": "Camila Rocha",
+    "email": "camila.rocha@example.com",
+    "idade": 25,
+    "cidade": "Fortaleza",
+    "ativo": false
+  },
+  {
+    "id": 9,
+    "nome": "Gabriel Souza",
+    "email": "gabriel.souza@example.com",
+    "idade": 32,
+    "cidade": "Florianópolis",
+    "ativo": true
+  },
+  {
+    "id": 10,
+    "nome": "Fernanda Barbosa",
+    "email": "fernanda.barbosa@example.com",
+    "idade": 29,
+    "cidade": "Brasília",
+    "ativo": true
+  }
+]
